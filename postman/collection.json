@@ -1,0 +1,62 @@
+{
+  "info": {
+    "name": "SEI APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get EVM Block",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/evm/block/1",
+          "host": ["{{baseUrl}}"],
+          "path": ["evm", "block", "1"]
+        }
+      }
+    },
+    {
+      "name": "Get EVM Transaction",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/evm/transactions/0x<tx_hash>",
+          "host": ["{{baseUrl}}"],
+          "path": ["evm", "transactions", "0x<tx_hash>"]
+        }
+      }
+    },
+    {
+      "name": "Get Cosmos Block",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/cosmos/block/1",
+          "host": ["{{baseUrl}}"],
+          "path": ["cosmos", "block", "1"]
+        }
+      }
+    },
+    {
+      "name": "Get Cosmos Transaction",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/cosmos/transactions/0x<tx_hash>",
+          "host": ["{{baseUrl}}"],
+          "path": ["cosmos", "transactions", "0x<tx_hash>"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    }
+  ]
+}
