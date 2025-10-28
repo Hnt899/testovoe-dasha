@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  api:
+    build: .
+    ports:
+      - '${PORT:-3000}:3000'
+    environment:
+      - NODE_ENV=production
+      - EVM_RPC_URL=${EVM_RPC_URL}
+      - COSMOS_RPC_URL=${COSMOS_RPC_URL}
+    command: ["node", "dist/main.js"]
